@@ -1,4 +1,4 @@
-package com.gdwx.tiku.kjcy.wxapi;
+package com.gdwx.tiku.kjcy;
 
 import com.gaodun.common.lib.social.SocialException;
 import com.gaodun.common.lib.social.oauth.Oauth;
@@ -17,11 +17,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class WeiboActivity extends Activity implements OnClickListener {
-
+public class WechatActivity extends Activity implements OnClickListener {
 	private TextView mTextView;
 
-	private static final int[] IDS = { R.id.login, R.id.share, };
+	private static final int[] IDS = { R.id.login, R.id.favor, R.id.timeline, R.id.session, };
 
 	private Oauth mOauth;
 	private Share mShare;
@@ -29,8 +28,8 @@ public class WeiboActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_weibo);
-		setTitle("Weibo");
+		setContentView(R.layout.activity_wechat);
+		setTitle("Wechat");
 
 		mTextView = (TextView) findViewById(R.id.infoText);
 		for (int id : IDS) {
@@ -38,29 +37,32 @@ public class WeiboActivity extends Activity implements OnClickListener {
 		}
 		mOauth = Oauth.getInstance(this);
 		mOauth.setCallback(new OauthBack());
-
+		
 		mShare = Share.getInstance(this);
 		mShare.setCallback(new ShareBack());
-	}
-	
-	@Override
-	protected void onNewIntent(Intent intent) {
-		super.onNewIntent(intent);
-		mShare.handleWeiboResponse(intent);
 	}
 
 	@Override
 	public void onClick(View v) {
+		String path = Environment.getExternalStorageDirectory().getAbsolutePath();
+		Entry entry = new Entry().setTitle("来自杨杨的分享").setContent("哈哈哈哈哈哈哈，这里是内容")
+				.setUrl("http://androidweekly.cn/").addImage(path + "/TEST/imgs/1.jpg");
+		
 		switch (v.getId()) {
 		case R.id.login:
-			mOauth.onWeibo();
+			mOauth.onWechat();
 			break;
 
-		case R.id.share:
-			String path = Environment.getExternalStorageDirectory().getAbsolutePath();
-			Entry entry = new Entry().setTitle("来自杨杨的分享").setContent("哈哈哈哈哈哈哈，这里是内容").setUrl("http://androidweekly.cn/")
-					.addImage(path + "/TEST/imgs/1.jpg");
-			mShare.weibo(entry);
+		case R.id.session:
+			mShare.session(entry);
+			break;
+			
+		case R.id.timeline:
+			mShare.timeline(entry);
+			break;
+			
+		case R.id.favor:
+			mShare.favor(entry);
 			break;
 
 		default:
@@ -93,7 +95,7 @@ public class WeiboActivity extends Activity implements OnClickListener {
 		}
 		
 	}
-
+	
 	class OauthBack implements OauthCallback {
 
 		@Override

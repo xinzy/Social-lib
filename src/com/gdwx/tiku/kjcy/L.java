@@ -1,4 +1,4 @@
-package com.gdwx.tiku.kjcy.wxapi;
+package com.gdwx.tiku.kjcy;
 
 import android.util.Log;
 
