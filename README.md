@@ -108,7 +108,7 @@
 
 在分享之前务必调用  Social.init(context); 初始化第三方帐号的配置信息
 
-1. 使用一键分享
+#### 使用一键分享
 
 一键分享已经写好了界面，使用Activity承载，首先需要在Manifest文件中注册该Activity 信息
 
@@ -130,16 +130,17 @@
 	share.openShareActivity(entry);
 
 
-1. 自定义分享
+#### 自定义分享
+
 
 	Social.init(this);
 	
 	Entry entry = new Entry().set...;
 	Share share = Share.getInstance(this);
 	share.setCallback(new Callback());	// 自定义回调
-	share.weibo(entry);					//分享到微博
-	share.session(entry);				//分享到微信好友
-	share.timeline(entry);				//分享到微信朋友圈
-	share.favor(entry);					//分享到微信收藏
-	share.qq(entry);					//分享到QQ好友
-	share.qzone(entry);					//分享到QQ空间
+	share.weibo(entry);	//分享到微博
+	share.session(entry);	//分享到微信好友
+	share.timeline(entry);	//分享到微信朋友圈
+	share.favor(entry);	//分享到微信收藏
+	share.qq(entry);	//分享到QQ好友
+	share.qzone(entry);	//分享到QQ空间
