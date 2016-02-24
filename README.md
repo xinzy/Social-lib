@@ -76,7 +76,7 @@
 
 ## 登录
 
-在登录之前务必调用  ***Social.init(context); *** 初始化第三方帐号的配置信息
+在登录之前务必调用  *Social.init(context); * 初始化第三方帐号的配置信息
 
 	Social.init(this);
 	
@@ -85,15 +85,15 @@
 	
 微博登录
 
-	mOauth,onWeibo();
+	mOauth.onWeibo();
 	
 微信登录
 
-	mOauth,onWechat();
+	mOauth.onWechat();
 
 QQ登录
 
-	mOauth,onQQ();
+	mOauth.onQQ();
 
 值得注意的是，如果是新浪登录和QQ登录时，务必重写Activity 的 onActivityResult 方法
 
@@ -106,9 +106,10 @@ QQ登录
 
 ## 分享
 
-在分享之前务必调用  ***Social.init(context); *** 初始化第三方帐号的配置信息
+在分享之前务必调用  *Social.init(context); * 初始化第三方帐号的配置信息
 
 1. 使用一键分享
+
 一键分享已经写好了界面，使用Activity承载，首先需要在Manifest文件中注册该Activity 信息
 
 	<activity
