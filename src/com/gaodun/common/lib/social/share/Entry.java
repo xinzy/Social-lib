@@ -1,9 +1,11 @@
 package com.gaodun.common.lib.social.share;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Entry {
+public class Entry implements Serializable {
 
+	private static final long serialVersionUID = -2206706913423077360L;
 	private String title;
 	private String content;
 	private String url;

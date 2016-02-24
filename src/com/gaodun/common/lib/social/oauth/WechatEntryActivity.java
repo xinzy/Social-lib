@@ -58,7 +58,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 	@Override
 	public void onReq(BaseReq req) {
 		
-		if (Oauth.DEBUG) {
+		if (Platform.DEBUG) {
 			System.out.println("Wechat Entry Activity onReq");
 		}
 		
@@ -68,7 +68,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 	@Override
 	public void onResp(BaseResp resp) {
 		
-		if (Oauth.DEBUG) {
+		if (Platform.DEBUG) {
 			System.out.println("Wechat Entry Activity onResp");
 		}
 
@@ -80,7 +80,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 				switch (authRes.errCode) {
 				case BaseResp.ErrCode.ERR_OK:
 					openid = authRes.openId;
-					if (Oauth.DEBUG) {
+					if (Platform.DEBUG) {
 						System.out.println("openid = " + openid);
 					}
 					loadAccessToken(authRes.code);
@@ -155,7 +155,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 		@Override
 		public void onSuccess(String result) {
 			
-			if (Oauth.DEBUG) {
+			if (Platform.DEBUG) {
 				System.out.println("wechat api: " + result);
 			}
 			

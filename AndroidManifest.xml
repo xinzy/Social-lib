@@ -46,6 +46,12 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+        <!--  -->
+        <activity
+            android:name="com.gaodun.common.lib.social.share.ShareActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait" />
 
         <!-- 以下是第三方平台必须的Activity -->
         <activity

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Social>
+    
+    <Weibo 
+        key="1108795777"
+        secret="bb38a46a0bbd41c90a1b82c61c24073d"
+        redirectUrl="http://www.gaodun.com/oauth/weibo/callback.php" />
+    
+    <Wechat
+        appid="wx8baf1de2a92d60c4"
+        secret="d4624c36b6795d1d99dcf0547af5443d" />
+    
+    <QQ
+        appid="101055478"
+        appkey="a15192b69926e129f53c1f12942f833a" />
+    
+</Social>

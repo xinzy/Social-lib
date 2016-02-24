@@ -58,8 +58,8 @@ public class WeiboActivity extends Activity implements OnClickListener {
 
 		case R.id.share:
 			String path = Environment.getExternalStorageDirectory().getAbsolutePath();
-			Entry entry = new Entry().setTitle("来自杨杨的分享").setContent("哈哈哈哈哈哈哈，这里是内容").setUrl("http://androidweekly.cn/")
-					.addImage(path + "/TEST/imgs/1.jpg");
+			Entry entry = new Entry().setTitle("测试分享到各大平台").setContent("这里是分享的内容，啦啦啦啦啦啦啦啊啦啦啦啦啦啦")
+					.setUrl("http://androidweekly.cn/").addImage(path + "/TEST/imgs/1.jpg");
 			mShare.weibo(entry);
 			break;
 

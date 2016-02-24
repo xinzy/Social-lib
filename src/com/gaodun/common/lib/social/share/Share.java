@@ -3,6 +3,7 @@ package com.gaodun.common.lib.social.share;
 import java.util.ArrayList;
 
 import com.gaodun.common.lib.social.Platform;
+import com.gaodun.common.lib.social.Social;
 import com.gaodun.common.lib.social.SocialUtil;
 import com.sina.weibo.sdk.api.ImageObject;
 import com.sina.weibo.sdk.api.TextObject;
@@ -37,8 +38,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 public class Share {
-	
-	static final boolean DEBUG = true;
 
 	private Activity mActivity;
 	private ShareCallback mCallback;
@@ -73,6 +72,7 @@ public class Share {
 
 	private Share(Activity activity) {
 		mActivity = activity;
+		Social.init(mActivity.getApplicationContext());
 
 		mTencent = Tencent.createInstance(Platform.QQ_APPID, mActivity.getApplicationContext());
 		mApi = WXAPIFactory.createWXAPI(mActivity.getApplicationContext(), Platform.WECHAT_APPID, false);
@@ -101,6 +101,14 @@ public class Share {
 		if (mPlatform == Platform.SHARE_QZONE) {
 			Tencent.onActivityResultData(requestCode, resultCode, data, mShareCallback);
 		}
+	}
+	
+	public void openShareActivity(Entry entry) {
+		
+		Intent intent = new Intent(mActivity, ShareActivity.class);
+		intent.putExtra(ShareActivity.PARAM_ENTRY, entry);
+		mActivity.startActivity(intent);
+		mActivity.overridePendingTransition(0, 0);
 	}
 
 	/**
@@ -154,9 +162,6 @@ public class Share {
 		request.transaction = System.currentTimeMillis() + "";
 		request.multiMessage = message;
 
-//		AuthInfo authInfo = new AuthInfo(mActivity.getApplicationContext(), Platform.WEIBO_KEY,
-//				Platform.WEIBO_REDIRECT_URL, Constant.WEIBO_SCOPE);
-//		WeiboCallback callback = new WeiboCallback();
 		mWeiboShareAPI.sendRequest(mActivity, request);
 	}
 
@@ -341,7 +346,7 @@ public class Share {
 	class WeiboResponse implements IWeiboHandler.Response {
 		@Override
 		public void onResponse(BaseResponse response) {
-			if (DEBUG) {
+			if (Platform.DEBUG) {
 				System.out.println("weibo hanlder onResponse");
 			}
 			
