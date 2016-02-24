@@ -4,6 +4,7 @@
 ## 配置
 1. 使用之前请在assert/social/SocialConfig.xml文件中配置相关信息。如下
 
+```
 	<?xml version="1.0" encoding="utf-8"?>
 	<Social>
 	    
@@ -21,9 +22,11 @@
 	        appkey="zzzzzzzzzzzzzzzzzz" />
 	    
 	</Social>
+```
 
 1. Android Manifest 
 
+```
 	<!-- 如果您打算使用一键分享功能，请将该Activity添加到配置文件中 -->
 	<activity
 	    android:name="com.gaodun.common.lib.social.share.ShareActivity"
@@ -55,15 +58,18 @@
 	        <data android:scheme="tencent101055478" />
 	    </intent-filter>
 	</activity>
+```
 
 1. 对于微信，需要在自己应用包下新建一个.wxapi.WXEntryActivity。 配置文件如下：
 
+```
 	<activity
 		android:name="com.gdwx.tiku.kjcy.wxapi.WXEntryActivity"
 		android:exported="true"
 		android:launchMode="singleTask"
 		android:screenOrientation="portrait"
 		android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+```
 
 其中Activity 可以继续 com.gaodun.common.lib.social.oauth.WechatEntryActivity， 不需要再写任何代码即可，因为WechatEntryActivity已经对其进行了封装
 
@@ -112,10 +118,12 @@
 
 一键分享已经写好了界面，使用Activity承载，首先需要在Manifest文件中注册该Activity 信息
 
+```
 	<activity
 	    android:name="com.gaodun.common.lib.social.share.ShareActivity"
 	    android:theme="@android:style/Theme.Translucent.NoTitleBar"
 	    android:screenOrientation="portrait" />
+```
 
 然后代码调用的时候只需如下代码即可完成分享
 
