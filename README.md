@@ -133,9 +133,8 @@
 1. 自定义分享
 
 	Social.init(this);
-	String path = Environment.getExternalStorageDirectory().getAbsolutePath();
-	Entry entry = new Entry().set...;
 	
+	Entry entry = new Entry().set...;
 	Share share = Share.getInstance(this);
 	share.setCallback(new Callback());	// 自定义回调
 	share.weibo(entry);					//分享到微博
