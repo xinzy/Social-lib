@@ -76,22 +76,22 @@
 
 ## 登录
 
-在登录之前务必调用  *Social.init(context); * 初始化第三方帐号的配置信息
+在登录之前务必调用  Social.init(context); 初始化第三方帐号的配置信息
 
 	Social.init(this);
 	
 	Oauth mOauth = Oauth.getInstance(this);
 	mOauth.setCallback(new OauthBack());
 	
-微博登录
+#### 微博登录
 
 	mOauth.onWeibo();
 	
-微信登录
+#### 微信登录
 
 	mOauth.onWechat();
 
-QQ登录
+#### QQ登录
 
 	mOauth.onQQ();
 
@@ -106,7 +106,7 @@ QQ登录
 
 ## 分享
 
-在分享之前务必调用  *Social.init(context); * 初始化第三方帐号的配置信息
+在分享之前务必调用  Social.init(context); 初始化第三方帐号的配置信息
 
 1. 使用一键分享
 
@@ -134,10 +134,8 @@ QQ登录
 
 	Social.init(this);
 	String path = Environment.getExternalStorageDirectory().getAbsolutePath();
-	Entry entry = new Entry().setTitle("测试分享到各大平台").setContent("这里是分享的内容，啦啦啦啦啦啦啦啊啦啦啦啦啦啦")
-			.setUrl("http://androidweekly.cn/").addImage(path + "/TEST/imgs/1.jpg")
-			.setImageUrl("https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png");
-			
+	Entry entry = new Entry().set...;
+	
 	Share share = Share.getInstance(this);
 	share.setCallback(new Callback());	// 自定义回调
 	share.weibo(entry);					//分享到微博
@@ -146,4 +144,3 @@ QQ登录
 	share.favor(entry);					//分享到微信收藏
 	share.qq(entry);					//分享到QQ好友
 	share.qzone(entry);					//分享到QQ空间
-
