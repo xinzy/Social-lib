@@ -86,7 +86,7 @@ public class Oauth {
 		if (! mTencent.isSessionValid()) {
 			mTencent.login(mActivity, Platform.QQ_SCOPE, new QQOauthCallback(QQOauthCallback.TYPE_OAUTH));
 		} else {
-			if (Platform.DEBUG) {
+			if (Social.DEBUG) {
 				System.out.println("Tencent is not session valid");
 			}
 			if (mCallback != null) {
@@ -138,7 +138,7 @@ public class Oauth {
 		@Override
 		public void onCancel() {
 			
-			if (Platform.DEBUG) {
+			if (Social.DEBUG) {
 				System.out.println("QQ login cancelled.");
 			}
 
@@ -150,7 +150,7 @@ public class Oauth {
 		@Override
 		public void onComplete(Object object) {
 			
-			if (Platform.DEBUG) {
+			if (Social.DEBUG) {
 				System.out.println("QQ onComplete : " + object);
 			}
 			
@@ -200,7 +200,7 @@ public class Oauth {
 		@Override
 		public void onError(UiError error) {
 			
-			if (Platform.DEBUG) {
+			if (Social.DEBUG) {
 				System.out.println(error == null ? "error is null"
 						: "error message = " + error.errorMessage + "; detail = " + error.errorDetail);
 			}
@@ -250,7 +250,7 @@ public class Oauth {
 		@Override
 		public void onComplete(String response) {
 			
-			if (Platform.DEBUG) {
+			if (Social.DEBUG) {
 				System.out.println("Weibo get user info: " + response);
 			}
 			

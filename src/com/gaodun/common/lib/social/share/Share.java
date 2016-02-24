@@ -346,7 +346,7 @@ public class Share {
 	class WeiboResponse implements IWeiboHandler.Response {
 		@Override
 		public void onResponse(BaseResponse response) {
-			if (Platform.DEBUG) {
+			if (Social.DEBUG) {
 				System.out.println("weibo hanlder onResponse");
 			}
 			

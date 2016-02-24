@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 import com.gaodun.common.lib.social.Constant;
 import com.gaodun.common.lib.social.Platform;
+import com.gaodun.common.lib.social.Social;
 import com.gaodun.common.lib.social.SocialException;
 import com.gaodun.common.lib.social.oauth.AsyncRequest.RequestCallback;
 import com.gaodun.common.lib.social.share.Share;
@@ -58,7 +59,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 	@Override
 	public void onReq(BaseReq req) {
 		
-		if (Platform.DEBUG) {
+		if (Social.DEBUG) {
 			System.out.println("Wechat Entry Activity onReq");
 		}
 		
@@ -68,7 +69,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 	@Override
 	public void onResp(BaseResp resp) {
 		
-		if (Platform.DEBUG) {
+		if (Social.DEBUG) {
 			System.out.println("Wechat Entry Activity onResp");
 		}
 
@@ -80,7 +81,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 				switch (authRes.errCode) {
 				case BaseResp.ErrCode.ERR_OK:
 					openid = authRes.openId;
-					if (Platform.DEBUG) {
+					if (Social.DEBUG) {
 						System.out.println("openid = " + openid);
 					}
 					loadAccessToken(authRes.code);
@@ -155,7 +156,7 @@ public abstract class WechatEntryActivity extends Activity implements IWXAPIEven
 		@Override
 		public void onSuccess(String result) {
 			
-			if (Platform.DEBUG) {
+			if (Social.DEBUG) {
 				System.out.println("wechat api: " + result);
 			}
 			

@@ -12,6 +12,10 @@ import org.xml.sax.helpers.DefaultHandler;
 import android.content.Context;
 
 public class Social {
+	
+	public static final boolean DEBUG = true;
+	
+	public static final String VERSION = "1.0.0";
 
 	private static final String CONFIG_PATH = "social/SocialConfig.xml";
 
@@ -24,7 +28,7 @@ public class Social {
 
 			return true;
 		} catch (Exception e) {
-			if (Platform.DEBUG) {
+			if (DEBUG) {
 				e.printStackTrace();
 			}
 			return false;
