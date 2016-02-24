@@ -50,7 +50,7 @@
         <!--  -->
         <activity
             android:name="com.gaodun.common.lib.social.share.ShareActivity"
-            android:theme="@android:style/Theme.Translucent"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:screenOrientation="portrait" />
 
         <!-- 以下是第三方平台必须的Activity -->
