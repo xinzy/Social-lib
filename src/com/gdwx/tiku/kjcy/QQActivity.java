@@ -26,8 +26,6 @@ public class QQActivity extends Activity implements OnClickListener {
 	private Oauth mOauth;
 	private Share mShare;
 	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
