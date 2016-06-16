@@ -1,4 +1,4 @@
-package com.gaodun.common.lib.social;
+package com.xinzy.social;
 
 import java.io.InputStream;
 

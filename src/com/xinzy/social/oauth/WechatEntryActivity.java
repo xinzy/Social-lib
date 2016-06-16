@@ -1,15 +1,8 @@
-package com.gaodun.common.lib.social.oauth;
+package com.xinzy.social.oauth;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.gaodun.common.lib.social.Constant;
-import com.gaodun.common.lib.social.Platform;
-import com.gaodun.common.lib.social.Social;
-import com.gaodun.common.lib.social.SocialException;
-import com.gaodun.common.lib.social.oauth.AsyncRequest.RequestCallback;
-import com.gaodun.common.lib.social.share.Share;
-import com.gaodun.common.lib.social.share.ShareCallback;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.modelmsg.SendAuth;
@@ -17,6 +10,13 @@ import com.tencent.mm.sdk.modelmsg.SendAuth.Resp;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
+import com.xinzy.social.Constant;
+import com.xinzy.social.Platform;
+import com.xinzy.social.Social;
+import com.xinzy.social.SocialException;
+import com.xinzy.social.oauth.AsyncRequest.RequestCallback;
+import com.xinzy.social.share.Share;
+import com.xinzy.social.share.ShareCallback;
 
 import android.app.Activity;
 import android.content.Intent;

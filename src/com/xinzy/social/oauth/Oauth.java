@@ -1,11 +1,7 @@
-package com.gaodun.common.lib.social.oauth;
+package com.xinzy.social.oauth;
 
 import org.json.JSONObject;
 
-import com.gaodun.common.lib.social.Constant;
-import com.gaodun.common.lib.social.Platform;
-import com.gaodun.common.lib.social.Social;
-import com.gaodun.common.lib.social.SocialException;
 import com.sina.weibo.sdk.auth.AuthInfo;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import com.sina.weibo.sdk.auth.WeiboAuthListener;
@@ -22,6 +18,10 @@ import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
+import com.xinzy.social.Constant;
+import com.xinzy.social.Platform;
+import com.xinzy.social.Social;
+import com.xinzy.social.SocialException;
 
 import android.app.Activity;
 import android.content.Intent;

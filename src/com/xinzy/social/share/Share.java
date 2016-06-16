@@ -1,10 +1,7 @@
-package com.gaodun.common.lib.social.share;
+package com.xinzy.social.share;
 
 import java.util.ArrayList;
 
-import com.gaodun.common.lib.social.Platform;
-import com.gaodun.common.lib.social.Social;
-import com.gaodun.common.lib.social.SocialUtil;
 import com.sina.weibo.sdk.api.ImageObject;
 import com.sina.weibo.sdk.api.TextObject;
 import com.sina.weibo.sdk.api.WebpageObject;
@@ -29,6 +26,9 @@ import com.tencent.open.utils.ThreadManager;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
+import com.xinzy.social.Platform;
+import com.xinzy.social.Social;
+import com.xinzy.social.SocialUtil;
 
 import android.app.Activity;
 import android.content.Intent;

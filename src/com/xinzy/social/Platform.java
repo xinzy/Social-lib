@@ -1,4 +1,4 @@
-package com.gaodun.common.lib.social;
+package com.xinzy.social;
 
 public class Platform {
 

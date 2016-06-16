@@ -1,4 +1,4 @@
-package com.gaodun.common.lib.social.share;
+package com.xinzy.social.share;
 
 import java.io.IOException;
 

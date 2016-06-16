@@ -1,4 +1,4 @@
-package com.gdwx.tiku.kjcy;
+package com.xinzy.social.test;
 
 import android.util.Log;
 

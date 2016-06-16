@@ -29,7 +29,7 @@
 ```
 	<!-- 如果您打算使用一键分享功能，请将该Activity添加到配置文件中 -->
 	<activity
-	    android:name="com.gaodun.common.lib.social.share.ShareActivity"
+	    android:name="com.xinzy.social.share.ShareActivity"
 	    android:theme="@android:style/Theme.Translucent.NoTitleBar"
 	    android:screenOrientation="portrait" />
 
@@ -64,7 +64,7 @@
 
 ```
 	<activity
-		android:name="com.gdwx.tiku.kjcy.wxapi.WXEntryActivity"
+		android:name="com.xinzy.test.wxapi.WXEntryActivity"
 		android:exported="true"
 		android:launchMode="singleTask"
 		android:screenOrientation="portrait"
@@ -73,9 +73,9 @@
 
 其中Activity 可以继续 com.gaodun.common.lib.social.oauth.WechatEntryActivity， 不需要再写任何代码即可，因为WechatEntryActivity已经对其进行了封装
 
-	package com.gdwx.tiku.kjcy.wxapi;
+	package com.xinzy.test.wxapi;
 	
-	import com.gaodun.common.lib.social.oauth.WechatEntryActivity;
+	import com.xinzy.social.oauth.WechatEntryActivity;
 
 	public class WXEntryActivity extends WechatEntryActivity {
 	}
@@ -120,7 +120,7 @@
 
 ```
 	<activity
-	    android:name="com.gaodun.common.lib.social.share.ShareActivity"
+	    android:name="com.xinzy.social.share.ShareActivity"
 	    android:theme="@android:style/Theme.Translucent.NoTitleBar"
 	    android:screenOrientation="portrait" />
 ```

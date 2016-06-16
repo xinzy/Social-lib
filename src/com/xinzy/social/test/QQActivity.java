@@ -1,13 +1,13 @@
-package com.gdwx.tiku.kjcy;
+package com.xinzy.social.test;
 
-import com.gaodun.common.lib.social.SocialException;
-import com.gaodun.common.lib.social.oauth.Oauth;
-import com.gaodun.common.lib.social.oauth.OauthCallback;
-import com.gaodun.common.lib.social.oauth.U;
-import com.gaodun.common.lib.social.share.Entry;
-import com.gaodun.common.lib.social.share.Share;
-import com.gaodun.common.lib.social.share.ShareCallback;
-import com.gdwx.tiku.kjcy.R;
+import com.xinzy.social.SocialException;
+import com.xinzy.social.oauth.Oauth;
+import com.xinzy.social.oauth.OauthCallback;
+import com.xinzy.social.oauth.U;
+import com.xinzy.social.share.Entry;
+import com.xinzy.social.share.Share;
+import com.xinzy.social.share.ShareCallback;
+import com.xinzy.social.test.R;
 
 import android.app.Activity;
 import android.content.Intent;

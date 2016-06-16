@@ -1,10 +1,10 @@
-package com.gdwx.tiku.kjcy;
+package com.xinzy.social.test;
 
-import com.gaodun.common.lib.social.Social;
-import com.gaodun.common.lib.social.share.Entry;
-import com.gaodun.common.lib.social.share.Share;
-import com.gaodun.common.lib.social.share.ShareCallback;
-import com.gdwx.tiku.kjcy.R;
+import com.xinzy.social.Social;
+import com.xinzy.social.share.Entry;
+import com.xinzy.social.share.Share;
+import com.xinzy.social.share.ShareCallback;
+import com.xinzy.social.test.R;
 
 import android.app.Activity;
 import android.content.Intent;

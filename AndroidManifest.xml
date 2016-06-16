@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gdwx.tiku.kjcy"
+    package="com.xinzy.social.test"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -21,7 +21,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.gdwx.tiku.kjcy.MainActivity"
+            android:name="com.xinzy.social.test.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gdwx.tiku.kjcy.WeiboActivity"
+            android:name="com.xinzy.social.test.WeiboActivity"
             android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
@@ -38,10 +38,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.gdwx.tiku.kjcy.QQActivity" />
-        <activity android:name="com.gdwx.tiku.kjcy.WechatActivity" />
+        <activity android:name="com.xinzy.social.test.QQActivity" />
+        <activity android:name="com.xinzy.social.test.WechatActivity" />
         <activity
-            android:name="com.gdwx.tiku.kjcy.wxapi.WXEntryActivity"
+            android:name="com.xinzy.social.test.wxapi.WXEntryActivityntryActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -49,7 +49,7 @@
         
         <!--  -->
         <activity
-            android:name="com.gaodun.common.lib.social.share.ShareActivity"
+            android:name="com.xinzy.social.share.ShareActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:screenOrientation="portrait" />
 
